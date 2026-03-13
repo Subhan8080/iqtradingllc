@@ -1,0 +1,197 @@
+/* =====================================================
+   SERVICES PAGE STYLES
+   ===================================================== */
+
+.services-intro {
+    padding: 40px 0;
+    background-color: var(--light-bg);
+}
+
+.services-detailed {
+    padding: 80px 0;
+}
+
+.service-detailed-card {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.service-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    opacity: 0.3;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.service-icon-large {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    min-width: 80px;
+    text-align: center;
+}
+
+.service-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-text p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.service-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.service-list li {
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+}
+
+.service-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.service-process {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.step {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.step h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.step p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.step-arrow {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    flex: 0 1 auto;
+}
+
+.service-benefits {
+    padding: 80px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.benefit-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Responsive for Services Page */
+@media (max-width: 768px) {
+    .service-content {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detailed-card {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        flex-direction: column;
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+        margin: -0.5rem 0;
+    }
+
+    .services-intro,
+    .services-detailed,
+    .service-process,
+    .service-benefits {
+        padding: 50px 0;
+    }
+}

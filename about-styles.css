@@ -1,0 +1,209 @@
+/* =====================================================
+   ABOUT PAGE STYLES
+   ===================================================== */
+
+.company-overview {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.overview-text h3 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.overview-text p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.expertise-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.expertise-list li {
+    padding: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+}
+
+.expertise-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.mission-vision {
+    padding: 80px 0;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.mv-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.mv-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.mv-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.mv-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.mv-card ul {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.mv-card ul li {
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #666;
+}
+
+.mv-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.company-values {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0 auto 1.5rem;
+}
+
+.value-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.value-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.company-info {
+    padding: 80px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.info-box h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.info-box ul {
+    list-style: none;
+}
+
+.info-box ul li {
+    padding: 0.6rem 0;
+    color: #666;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.info-box ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Responsive for About Page */
+@media (max-width: 768px) {
+    .overview-content,
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-overview,
+    .mission-vision,
+    .company-values,
+    .company-info {
+        padding: 50px 0;
+    }
+}
