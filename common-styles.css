@@ -353,12 +353,61 @@ body {
 .whatsapp-btn i {
     font-size: 1.8rem;
     color: var(--white);
+    transition: var(--transition);
+}
+
+.whatsapp-btn::after {
+    content: 'Contact Sales';
+    position: absolute;
+    bottom: 0;
+    right: 75px;
+    background-color: #25d366;
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 58px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 8px solid #25d366;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    pointer-events: none;
 }
 
 .whatsapp-btn:hover {
     background-color: #20ba5a;
     box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
     transform: scale(1.1);
+}
+
+.whatsapp-btn:hover i {
+    opacity: 0;
+}
+
+.whatsapp-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.whatsapp-btn:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* =====================================================
