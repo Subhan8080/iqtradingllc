@@ -47,11 +47,23 @@ body {
 }
 
 .navbar a {
-    color: var(--white);
+    color: var(--white) !important;
+}
+
+.navbar a:link {
+    color: var(--white) !important;
 }
 
 .navbar a:visited {
-    color: var(--white);
+    color: var(--white) !important;
+}
+
+.navbar a:active {
+    color: var(--white) !important;
+}
+
+.navbar a:focus {
+    color: var(--white) !important;
 }
 
 .nav-wrapper {
@@ -68,7 +80,7 @@ body {
 }
 
 .nav-phone {
-    color: var(--white);
+    color: var(--white) !important;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
@@ -78,12 +90,20 @@ body {
     gap: 0.5rem;
 }
 
+.nav-phone:link {
+    color: var(--white) !important;
+}
+
 .nav-phone:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color) !important;
 }
 
 .nav-phone:visited {
-    color: var(--white);
+    color: var(--white) !important;
+}
+
+.nav-phone:active {
+    color: var(--white) !important;
 }
 
 .logo h1 {
