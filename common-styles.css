@@ -102,6 +102,12 @@ body {
     padding-bottom: 0.25rem;
 }
 
+.nav-link.active {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.25rem;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
