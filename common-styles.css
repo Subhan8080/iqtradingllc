@@ -46,6 +46,14 @@ body {
     box-shadow: var(--shadow);
 }
 
+.navbar a {
+    color: var(--white);
+}
+
+.navbar a:visited {
+    color: var(--white);
+}
+
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -72,6 +80,10 @@ body {
 
 .nav-phone:hover {
     color: var(--secondary-color);
+}
+
+.nav-phone:visited {
+    color: var(--white);
 }
 
 .logo h1 {
