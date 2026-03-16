@@ -89,6 +89,30 @@
     color: #666;
     font-size: 0.95rem;
     margin: 0;
+    margin-bottom: 1rem;
+}
+
+.product-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.product-images img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background: var(--white);
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.product-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .quality-section {
