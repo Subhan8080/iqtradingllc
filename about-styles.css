@@ -330,10 +330,88 @@
 }
 
 /* Responsive for About Page */
+@media (max-width: 1024px) {
+    .overview-image {
+        display: none;
+    }
+
+    .overview-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .overview-content,
-    .mission-vision-grid {
+    .mission-vision-grid,
+    .values-grid,
+    .awards-grid {
         grid-template-columns: 1fr;
+    }
+
+    .overview-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .overview-text p {
+        font-size: 0.95rem;
+    }
+
+    .mv-card {
+        padding: 1.5rem;
+    }
+
+    .mv-icon {
+        font-size: 2.5rem;
+    }
+
+    .mv-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .value-card {
+        padding: 1.5rem;
+    }
+
+    .value-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .value-card h4 {
+        font-size: 1rem;
+    }
+
+    .award-card {
+        padding: 1.5rem;
+    }
+
+    .award-icon {
+        font-size: 2.5rem;
+    }
+
+    .award-card h4 {
+        font-size: 1rem;
+    }
+
+    .event-content {
+        padding: 1.5rem;
+    }
+
+    .event-content h4 {
+        font-size: 1rem;
+    }
+
+    .event-date {
+        font-size: 0.85rem;
+    }
+
+    .info-box {
+        padding: 1.5rem;
+    }
+
+    .info-box h4 {
+        font-size: 1rem;
     }
 
     .company-overview,
@@ -361,5 +439,120 @@
         left: 0;
         transform: none;
         margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-list {
+        margin: 1rem 0;
+    }
+
+    .expertise-list li {
+        font-size: 0.9rem;
+        padding: 0.6rem 0;
+    }
+
+    .overview-text h3 {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .overview-text p {
+        font-size: 0.9rem;
+    }
+
+    .mv-card {
+        padding: 1.2rem;
+    }
+
+    .mv-icon {
+        font-size: 2rem;
+    }
+
+    .mv-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .mv-card p {
+        font-size: 0.9rem;
+    }
+
+    .mv-card ul li {
+        font-size: 0.9rem;
+    }
+
+    .value-card {
+        padding: 1rem;
+    }
+
+    .value-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .value-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .value-card p {
+        font-size: 0.85rem;
+    }
+
+    .award-card {
+        padding: 1.2rem;
+    }
+
+    .award-icon {
+        font-size: 2rem;
+    }
+
+    .award-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .award-issuer {
+        font-size: 0.8rem;
+    }
+
+    .award-card p {
+        font-size: 0.85rem;
+    }
+
+    .event-content {
+        padding: 1.2rem;
+    }
+
+    .event-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .event-date {
+        font-size: 0.8rem;
+    }
+
+    .event-content p {
+        font-size: 0.85rem;
+    }
+
+    .info-box {
+        padding: 1.2rem;
+    }
+
+    .info-box h4 {
+        font-size: 0.95rem;
+    }
+
+    .info-box ul li {
+        font-size: 0.85rem;
+    }
+
+    .company-overview,
+    .mission-vision,
+    .company-values,
+    .company-info,
+    .awards-events,
+    .events-section {
+        padding: 40px 0;
     }
 }

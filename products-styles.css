@@ -183,14 +183,65 @@
 }
 
 /* Responsive for Products Page */
+@media (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quality-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .category-header {
         flex-direction: column;
         text-align: center;
+        padding: 1.5rem;
+    }
+
+    .category-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .category-header h3 {
+        font-size: 1.5rem;
     }
 
     .product-list {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .product-item {
+        padding: 1.2rem;
+    }
+
+    .product-badge {
+        font-size: 0.8rem;
+    }
+
+    .product-images img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quality-card {
+        padding: 1.5rem;
+    }
+
+    .quality-card i {
+        font-size: 2rem;
+    }
+
+    .custom-list {
+        margin: 1rem 0;
     }
 
     .products-intro,
@@ -198,5 +249,82 @@
     .quality-section,
     .custom-orders {
         padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-intro {
+        padding: 40px 0;
+    }
+
+    .category-header {
+        padding: 1rem;
+    }
+
+    .category-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .category-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .category-content {
+        padding: 1.5rem;
+    }
+
+    .category-content p {
+        font-size: 0.9rem;
+    }
+
+    .product-item {
+        padding: 1rem;
+    }
+
+    .product-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .product-item p {
+        font-size: 0.9rem;
+    }
+
+    .product-images {
+        gap: 0.5rem;
+    }
+
+    .product-images img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .quality-card {
+        padding: 1rem;
+    }
+
+    .quality-card h4 {
+        font-size: 1rem;
+    }
+
+    .quality-card p {
+        font-size: 0.85rem;
+    }
+
+    .custom-content p {
+        font-size: 0.95rem;
+    }
+
+    .custom-list li {
+        font-size: 0.9rem;
+    }
+
+    .products-intro,
+    .product-categories,
+    .quality-section,
+    .custom-orders {
+        padding: 40px 0;
     }
 }

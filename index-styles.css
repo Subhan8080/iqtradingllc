@@ -590,7 +590,26 @@
 }
 
 /* Responsive for Home Page */
+@media (max-width: 1024px) {
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .services-grid,
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
     .hero-content h2 {
         font-size: 2rem;
     }
@@ -599,33 +618,90 @@
         font-size: 1rem;
     }
 
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
     .cta-buttons {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: 1rem;
     }
 
     .btn {
         width: 100%;
-        max-width: 300px;
     }
 
-    .about-content {
+    .about-content,
+    .about-highlight {
         grid-template-columns: 1fr;
+    }
+
+    .about-highlight {
+        gap: 1rem;
     }
 
     .contact-wrapper {
         grid-template-columns: 1fr;
     }
 
-    .hero {
-        padding: 60px 0;
+    .services-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .stat-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .stat-content p {
+        font-size: 0.85rem;
+    }
+
+    .features-list {
+        max-width: 100%;
+    }
+
+    .feature-item {
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .feature-text h4 {
+        font-size: 1rem;
+    }
+
+    .feature-text p {
+        font-size: 0.9rem;
     }
 
     .about,
     .services,
     .why-choose,
     .products,
-    .contact {
+    .contact,
+    .statistics {
         padding: 50px 0;
     }
 }
@@ -635,19 +711,65 @@
         font-size: 1.5rem;
     }
 
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
     .services-grid,
     .products-grid,
-    .features-grid {
+    .features-grid,
+    .stats-grid {
         grid-template-columns: 1fr;
     }
 
     .feature-item {
         flex-direction: column;
         text-align: center;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .feature-icon {
+        width: 50px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-card,
+    .product-card,
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .product-image {
+        height: 120px;
+    }
+
+    .product-image i {
+        font-size: 2rem;
+    }
+
+    .vendor-logos img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .about,
+    .services,
+    .products,
+    .contact,
+    .statistics {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
         margin-left: auto;
         margin-right: auto;
     }

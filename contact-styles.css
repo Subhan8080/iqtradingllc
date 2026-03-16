@@ -173,13 +173,78 @@
 }
 
 /* Responsive for Contact Page */
+@media (max-width: 1024px) {
+    .reasons-grid,
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .contact-section .contact-wrapper {
         grid-template-columns: 1fr;
     }
 
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .info-card {
+        gap: 1rem;
+        padding: 1.2rem;
+    }
+
+    .info-icon {
+        font-size: 1.8rem;
+        min-width: 40px;
+    }
+
+    .info-content h4 {
+        font-size: 1rem;
+    }
+
+    .info-content p {
+        font-size: 0.9rem;
+    }
+
     .map-container {
         height: 300px;
+    }
+
+    .reasons-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reason {
+        padding: 1.5rem;
+    }
+
+    .reason i {
+        font-size: 2rem;
+    }
+
+    .reason h4 {
+        font-size: 1rem;
+    }
+
+    .faq-item-contact {
+        padding: 1.2rem;
+    }
+
+    .faq-item-contact h4 {
+        font-size: 0.95rem;
     }
 
     .contact-section,
@@ -187,5 +252,85 @@
     .faq-section-contact,
     .why-contact {
         padding: 50px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-wrapper {
+        padding: 1.2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .info-card {
+        gap: 0.8rem;
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-icon {
+        font-size: 1.5rem;
+        min-width: auto;
+    }
+
+    .info-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .info-content p {
+        font-size: 0.85rem;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    .reason {
+        padding: 1.2rem;
+    }
+
+    .reason i {
+        font-size: 1.8rem;
+    }
+
+    .reason h4 {
+        font-size: 0.9rem;
+    }
+
+    .reason p {
+        font-size: 0.85rem;
+    }
+
+    .faq-item-contact {
+        padding: 1rem;
+    }
+
+    .faq-item-contact h4 {
+        font-size: 0.9rem;
+    }
+
+    .faq-item-contact p {
+        font-size: 0.85rem;
+    }
+
+    .contact-section,
+    .map-section,
+    .faq-section-contact,
+    .why-contact {
+        padding: 40px 0;
     }
 }
