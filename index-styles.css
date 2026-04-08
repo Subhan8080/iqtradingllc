@@ -426,7 +426,7 @@
 }
 
 .product-image {
-    height: 400px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -932,7 +932,7 @@
     }
 
     .product-image {
-        height: 320px;
+        height: 400px;
     }
 
     .product-image i {
