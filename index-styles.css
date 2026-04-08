@@ -426,7 +426,7 @@
 }
 
 .product-image {
-    height: 300px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -488,8 +488,8 @@
 }
 
 .vendor-logos img {
-    height: 65px;
-    width: 65px;
+    height: 80px;
+    width: 80px;
     object-fit: contain;
     border-radius: 4px;
     padding: 0.3rem;
@@ -504,8 +504,8 @@
 }
 
 .vendor-logos.pet-logos img {
-    width: 120px;
-    height: 75px;
+    width: 150px;
+    height: 95px;
 }
 
 .product-note {
@@ -936,7 +936,7 @@
     }
 
     .product-image {
-        height: 240px;
+        height: 320px;
     }
 
     .product-image i {
@@ -944,13 +944,13 @@
     }
 
     .vendor-logos img {
-        height: 55px;
-        width: 55px;
+        height: 70px;
+        width: 70px;
     }
 
     .vendor-logos.pet-logos img {
-        width: 100px;
-        height: 60px;
+        width: 130px;
+        height: 80px;
     }
 
     .about,
