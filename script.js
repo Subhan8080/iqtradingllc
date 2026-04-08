@@ -124,6 +124,28 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Our Brands slider navigation
+document.querySelectorAll('.brands-slider').forEach(slider => {
+    const brandsTrack = slider.querySelector('.brands-track');
+    const brandsPrev = slider.querySelector('.brands-nav-prev');
+    const brandsNext = slider.querySelector('.brands-nav-next');
+
+    if (brandsTrack && brandsPrev && brandsNext) {
+        const scrollBrands = (direction) => {
+            const firstCard = brandsTrack.querySelector('.brand-circle');
+            const cardStep = firstCard ? firstCard.offsetWidth + 19 : 190;
+
+            brandsTrack.scrollBy({
+                left: direction * cardStep * 2,
+                behavior: 'smooth'
+            });
+        };
+
+        brandsPrev.addEventListener('click', () => scrollBrands(-1));
+        brandsNext.addEventListener('click', () => scrollBrands(1));
+    }
+});
+
 // =====================================================
 // FAQ PAGE FUNCTIONALITY
 // =====================================================
