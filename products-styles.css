@@ -495,6 +495,130 @@
     }
 }
 
+/* =====================================================
+   HARD TOOLS BRANDS SECTION
+   ===================================================== */
+
+.hard-tools-brands {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecf1 100%);
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.brand-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    min-height: 260px;
+}
+
+.brand-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(31, 58, 147, 0.15);
+    border-color: var(--primary-color);
+}
+
+.brand-logo {
+    max-width: 140px;
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover .brand-logo {
+    transform: scale(1.08);
+}
+
+.brand-card h4 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive for Hard Tools Brands */
+@media (max-width: 1024px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hard-tools-brands {
+        padding: 60px 0;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .brand-card {
+        padding: 1.5rem;
+        min-height: 220px;
+    }
+
+    .brand-logo {
+        max-width: 100px;
+        max-height: 90px;
+        margin-bottom: 1rem;
+    }
+
+    .brand-card h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hard-tools-brands {
+        padding: 50px 0;
+    }
+
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .brand-card {
+        padding: 1.2rem;
+        min-height: 200px;
+    }
+
+    .brand-logo {
+        max-width: 80px;
+        max-height: 70px;
+        margin-bottom: 0.8rem;
+    }
+
+    .brand-card h4 {
+        font-size: 0.9rem;
+    }
+}
+
 .quality-section {
     padding: 80px 0;
     background-color: var(--light-bg);
