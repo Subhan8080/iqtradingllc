@@ -92,26 +92,30 @@ document.querySelectorAll('.service-card, .product-card, .feature, .info-card, .
     observer.observe(el);
 });
 
-// Navigation highlight on scroll
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
+// Navigation highlight on scroll (only on homepage)
+const currentPageForScroll = window.location.pathname.split('/').pop() || 'index.html';
+
+if (currentPageForScroll === 'index.html' || currentPageForScroll === '') {
+    window.addEventListener('scroll', () => {
+        let current = '';
+        const sections = document.querySelectorAll('section');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (current && link.getAttribute('href').slice(1) === current) {
+                link.classList.add('active');
+            }
+        });
     });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
+}
 
 // Add active class styling
 const style = document.createElement('style');
