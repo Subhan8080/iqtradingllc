@@ -164,6 +164,65 @@
     padding: 0 0.5rem;
 }
 
+/* Pet Food Categories Grid */
+.pet-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.pet-category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--white);
+    border: 2px solid #f0f0f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding-bottom: 1.2rem;
+}
+
+.pet-category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(31, 58, 147, 0.15);
+    border-color: var(--primary-color);
+}
+
+.pet-category-img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    display: block;
+    background: #f9f9f9;
+}
+
+.pet-category-card:hover .pet-category-img {
+    transform: scale(1.08);
+}
+
+.pet-category-card h4 {
+    color: var(--primary-color);
+    margin: 1rem 0.5rem 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 0 0.5rem;
+}
+
+.pet-category-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0.5rem 0.5rem 0;
+    padding: 0 0.5rem;
+    line-height: 1.4;
+}
+
 .product-images {
     display: flex;
     flex-wrap: wrap;
@@ -226,6 +285,36 @@
     gap: 1.5rem;
 }
 
+/* Pet Care Grid - 3 columns for wider cards */
+.product-subcategories.pet-care-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.product-subcategories.pet-care-grid .subcategory-item:nth-child(9) {
+    grid-column: 1 / span 2;
+}
+
+.product-subcategories.pet-care-grid .subcategory-item:nth-child(10) {
+    grid-column: 2 / span 2;
+}
+
+/* Desktop: 4 columns for full screen */
+@media (min-width: 1400px) {
+    .product-subcategories.pet-care-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .product-subcategories.pet-care-grid .subcategory-item:nth-child(9) {
+        grid-column: 1 / span 2;
+    }
+    
+    .product-subcategories.pet-care-grid .subcategory-item:nth-child(10) {
+        grid-column: 3 / span 2;
+    }
+}
+
 .subcategory-item {
     background: var(--light-bg);
     padding: 1.5rem;
@@ -276,6 +365,63 @@
     font-size: 0.7rem;
 }
 
+/* Subcategory Item with Image - Image on top, text below */
+.subcategory-item.with-image {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--light-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.subcategory-item.with-image:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(31, 58, 147, 0.15);
+    border-color: var(--primary-color);
+}
+
+.subcategory-img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    display: block;
+    background: var(--white);
+    border-radius: 8px;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.subcategory-item.with-image:hover .subcategory-img {
+    transform: scale(1.02);
+}
+
+.subcategory-content {
+    padding: 1.5rem 1rem;
+    flex: 1;
+}
+
+.subcategory-content h4 {
+    color: var(--primary-color);
+    margin: 0 0 0.7rem 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.subcategory-content p {
+    color: #666;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 /* Responsive for Product Detail Layout */
 @media (max-width: 1024px) {
     .product-detail-layout {
@@ -284,6 +430,15 @@
     
     .product-subcategories {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-subcategories.pet-care-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-subcategories.pet-care-grid .subcategory-item:nth-child(9),
+    .product-subcategories.pet-care-grid .subcategory-item:nth-child(10) {
+        grid-column: auto;
     }
 }
 
@@ -316,6 +471,25 @@
     }
     
     .industrial-category-card h4 {
+        font-size: 0.95rem;
+        margin: 0.8rem 0.4rem 0;
+    }
+    
+    .pet-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .pet-category-img {
+        height: 140px;
+    }
+    
+    .pet-category-card {
+        padding-bottom: 1rem;
+    }
+    
+    .pet-category-card h4 {
         font-size: 0.95rem;
         margin: 0.8rem 0.4rem 0;
     }
@@ -525,6 +699,25 @@
         font-size: 0.9rem;
         margin: 0.6rem 0.3rem 0;
     }
+    
+    .pet-categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .pet-category-img {
+        height: 120px;
+    }
+    
+    .pet-category-card {
+        padding-bottom: 0.8rem;
+    }
+    
+    .pet-category-card h4 {
+        font-size: 0.9rem;
+        margin: 0.6rem 0.3rem 0;
+    }
 
     .quality-card {
         padding: 1rem;
@@ -545,7 +738,7 @@
     .custom-list li {
         font-size: 0.9rem;
     }
-
+    
     .products-intro,
     .product-categories,
     .quality-section,
