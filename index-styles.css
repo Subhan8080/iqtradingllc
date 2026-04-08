@@ -726,12 +726,12 @@
 
 .logo-item {
     background: #f9f9f9;
-    padding: 0.8rem;
+    padding: 1.2rem;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 140px;
     border: 1px solid #e5e5e5;
     transition: all 0.3s ease;
 }
@@ -956,7 +956,7 @@
     }
 
     .logo-item {
-        height: 70px;
+        height: 120px;
     }
 }
 
@@ -1094,8 +1094,8 @@
     }
 
     .logo-item {
-        height: 75px;
-        padding: 0.6rem;
+        height: 110px;
+        padding: 1rem;
     }
 }
 
@@ -1338,8 +1338,8 @@
     }
 
     .logo-item {
-        height: 65px;
-        padding: 0.5rem;
+        height: 100px;
+        padding: 0.8rem;
     }
 }
         margin-left: auto;
