@@ -124,7 +124,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Our Brands slider navigation
+// Our Brands slider navigation with auto-scroll
 document.querySelectorAll('.brands-slider').forEach(slider => {
     const brandsTrack = slider.querySelector('.brands-track');
     const brandsPrev = slider.querySelector('.brands-nav-prev');
@@ -136,13 +136,50 @@ document.querySelectorAll('.brands-slider').forEach(slider => {
             const cardStep = firstCard ? firstCard.offsetWidth + 19 : 190;
 
             brandsTrack.scrollBy({
-                left: direction * cardStep * 2,
+                left: direction * cardStep,
                 behavior: 'smooth'
             });
+            
+            // Reset auto-scroll timer when manually scrolled
+            clearInterval(autoScrollInterval);
+            startAutoScroll();
         };
 
         brandsPrev.addEventListener('click', () => scrollBrands(-1));
         brandsNext.addEventListener('click', () => scrollBrands(1));
+
+        // Auto-scroll functionality
+        let autoScrollInterval;
+
+        const startAutoScroll = () => {
+            autoScrollInterval = setInterval(() => {
+                const firstCard = brandsTrack.querySelector('.brand-circle');
+                const cardStep = firstCard ? firstCard.offsetWidth + 19 : 190;
+                
+                brandsTrack.scrollBy({
+                    left: cardStep,
+                    behavior: 'smooth'
+                });
+
+                // Loop back to start when reaching the end
+                setTimeout(() => {
+                    if (brandsTrack.scrollLeft >= brandsTrack.scrollWidth - brandsTrack.clientWidth - 50) {
+                        brandsTrack.scrollLeft = 0;
+                    }
+                }, 600);
+            }, 5000);
+        };
+
+        startAutoScroll();
+
+        // Pause auto-scroll on hover
+        brandsTrack.addEventListener('mouseenter', () => {
+            clearInterval(autoScrollInterval);
+        });
+
+        brandsTrack.addEventListener('mouseleave', () => {
+            startAutoScroll();
+        });
     }
 });
 

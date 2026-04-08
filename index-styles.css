@@ -520,6 +520,7 @@
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2.5rem;
+    flex-wrap: wrap;
 }
 
 .brands-heading h2 {
@@ -527,6 +528,8 @@
     letter-spacing: 1px;
     font-size: 2.2rem;
     margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .heading-line {
@@ -547,11 +550,12 @@
 .brands-track {
     display: flex;
     gap: 1.2rem;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
     padding: 0.5rem 2rem;
-    width: calc(100% - 100px);
+    width: calc(5 * 170px + 4 * 1.2rem + 4rem);
+    margin: 0 auto;
 }
 
 .brands-track::-webkit-scrollbar {
@@ -579,8 +583,8 @@
 
 .brand-circle img {
     width: 100%;
-    max-width: 135px;
-    max-height: 95px;
+    max-width: 155px;
+    max-height: 120px;
     object-fit: contain;
 }
 
@@ -763,6 +767,7 @@
 
     .brands-heading h2 {
         font-size: 1.7rem;
+        width: 100%;
     }
 
     .heading-line {
@@ -770,7 +775,7 @@
     }
 
     .brands-track {
-        width: calc(100% - 88px);
+        width: calc(5 * 145px + 4 * 1.2rem + 4rem);
     }
 
     .brand-circle {
@@ -884,6 +889,7 @@
 
     .brands-heading h2 {
         font-size: 1.3rem;
+        width: 100%;
     }
 
     .heading-line {
@@ -891,7 +897,7 @@
     }
 
     .brands-track {
-        width: calc(100% - 70px);
+        width: calc(5 * 120px + 4 * 0.8rem + 4rem);
         gap: 0.8rem;
     }
 
@@ -903,8 +909,8 @@
     }
 
     .brand-circle img {
-        max-width: 110px;
-        max-height: 78px;
+        max-width: 130px;
+        max-height: 100px;
     }
 
     .brands-nav {
