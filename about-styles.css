@@ -645,3 +645,71 @@
         padding: 40px 0;
     }
 }
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+    .info-card {
+        padding: 1.2rem;
+    }
+
+    .card-icon {
+        font-size: 1.8rem;
+        width: 45px;
+        height: 45px;
+    }
+
+    .info-card h3 {
+        font-size: 1rem;
+    }
+
+    .info-card p {
+        font-size: 0.85rem;
+    }
+
+    .mv-card {
+        padding: 1rem;
+    }
+
+    .mv-icon {
+        font-size: 2rem;
+    }
+
+    .mv-card h3 {
+        font-size: 1rem;
+    }
+
+    .value-card {
+        padding: 0.9rem;
+    }
+
+    .value-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .value-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .award-card {
+        padding: 1rem;
+    }
+
+    .award-card h4 {
+        font-size: 0.9rem;
+    }
+
+    .event-content {
+        padding: 1rem;
+    }
+
+    .info-box {
+        padding: 1.2rem;
+    }
+
+    .info-box h4 {
+        font-size: 0.95rem;
+    }
+}
+}

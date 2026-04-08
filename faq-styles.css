@@ -419,3 +419,69 @@
         padding: 0.8rem;
     }
 }
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+    .category-title {
+        font-size: 0.95rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .faq-items {
+        padding: 1rem;
+    }
+
+    .faq-header {
+        padding: 0.7rem;
+    }
+
+    .faq-header h4 {
+        font-size: 0.85rem;
+    }
+
+    .faq-toggle {
+        font-size: 0.85rem;
+    }
+
+    .faq-answer {
+        padding: 0.7rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.8rem;
+    }
+
+    .faq-featured {
+        padding: 1rem;
+    }
+
+    .faq-featured h3 {
+        font-size: 0.95rem;
+    }
+
+    .faq-featured p {
+        font-size: 0.8rem;
+    }
+
+    .faq-search input {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .quick-link {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .faq-contact-cta {
+        padding: 1rem;
+    }
+
+    .faq-contact-cta h3 {
+        font-size: 0.9rem;
+    }
+
+    .faq-contact-cta p {
+        font-size: 0.8rem;
+    }
+}

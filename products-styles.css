@@ -746,3 +746,50 @@
         padding: 40px 0;
     }
 }
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+    .category-header {
+        padding: 0.8rem;
+        gap: 1rem;
+    }
+
+    .category-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .category-header h3 {
+        font-size: 1rem;
+    }
+
+    .product-item {
+        padding: 0.8rem;
+    }
+
+    .quality-card {
+        padding: 1.2rem;
+    }
+
+    .quality-card i {
+        font-size: 2rem;
+    }
+
+    .quality-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .custom-content p {
+        font-size: 0.9rem;
+    }
+
+    .custom-list {
+        margin: 1rem 0;
+    }
+
+    .custom-list li {
+        font-size: 0.85rem;
+    }
+}
+}

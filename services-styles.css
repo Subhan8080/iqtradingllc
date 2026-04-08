@@ -329,3 +329,55 @@
         padding: 40px 0;
     }
 }
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-icon {
+        font-size: 1.8rem;
+    }
+
+    .service-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+
+    .service-detailed-card {
+        padding: 1rem;
+    }
+
+    .detailed-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .step {
+        padding: 1rem;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .step h4 {
+        font-size: 0.9rem;
+    }
+
+    .benefit-item {
+        gap: 0.8rem;
+    }
+
+    .benefit-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+}
