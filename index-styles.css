@@ -993,6 +993,314 @@
     font-size: 0.85rem;
 }
 
+/* =====================================================
+   INDUSTRIAL & PREMIUM PRODUCTS SHOWCASE
+   ===================================================== */
+
+.industrial-premium-showcase {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.industrial-premium-showcase .section-title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.industrial-premium-showcase .section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.showcase-tabs {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1.5rem;
+    background: rgba(243, 156, 18, 0.05);
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn:hover {
+    background: rgba(243, 156, 18, 0.1);
+}
+
+.tab-btn.active {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+.tab-content {
+    display: none;
+    padding: 3rem 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.showcase-product {
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f4f8 100%);
+    border-radius: 12px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.showcase-product:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 15px 35px rgba(243, 156, 18, 0.15);
+    background: var(--white);
+}
+
+.showcase-product-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.showcase-product-image img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.showcase-product:hover .showcase-product-image img {
+    transform: scale(1.15);
+}
+
+.showcase-product h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.8rem 0;
+}
+
+.showcase-product p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tab-footer {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.05) 0%, rgba(43, 90, 155, 0.02) 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.tab-footer p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    max-width: 600px;
+}
+
+.tab-footer .btn-primary {
+    padding: 0.9rem 2rem;
+}
+
+/* Responsive Design for Industrial Premium Showcase */
+@media (max-width: 1200px) {
+    .product-showcase-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .showcase-product {
+        padding: 1.5rem;
+    }
+
+    .showcase-product-image {
+        height: 170px;
+    }
+
+    .showcase-product h4 {
+        font-size: 1rem;
+    }
+
+    .showcase-product p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .industrial-premium-showcase {
+        padding: 60px 0;
+    }
+
+    .industrial-premium-showcase .section-title {
+        font-size: 2rem;
+    }
+
+    .industrial-premium-showcase .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .tab-buttons {
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .tab-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .product-showcase-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .showcase-product {
+        padding: 1.2rem;
+    }
+
+    .showcase-product-image {
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .showcase-product h4 {
+        font-size: 0.95rem;
+    }
+
+    .showcase-product p {
+        font-size: 0.8rem;
+    }
+
+    .tab-footer {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .tab-footer p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .industrial-premium-showcase {
+        padding: 40px 0;
+    }
+
+    .industrial-premium-showcase .section-title {
+        font-size: 1.6rem;
+    }
+
+    .industrial-premium-showcase .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .tab-btn {
+        padding: 1rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .tab-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .product-showcase-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .showcase-product {
+        padding: 1rem;
+    }
+
+    .showcase-product-image {
+        height: 120px;
+        margin-bottom: 0.8rem;
+    }
+
+    .showcase-product h4 {
+        font-size: 0.85rem;
+    }
+
+    .showcase-product p {
+        font-size: 0.75rem;
+    }
+
+    .tab-footer {
+        padding: 1rem;
+    }
+
+    .tab-footer p {
+        font-size: 0.9rem;
+    }
+}
+
 /* Responsive for Home Page */
 @media (max-width: 1024px) {
     .hero-content h2 {
