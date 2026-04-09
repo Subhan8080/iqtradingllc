@@ -395,6 +395,59 @@
     font-weight: bold;
 }
 
+/* Featured Imports Section */
+.featured-imports {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+}
+
+.featured-imports .section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.imports-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.import-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.import-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.import-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.import-card h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+
 /* Responsive for About Page */
 @media (max-width: 1024px) {
     .overview-image {
